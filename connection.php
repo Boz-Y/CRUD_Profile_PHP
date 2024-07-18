@@ -6,7 +6,7 @@
  */
 
 $databaseHost = 'localhost';
-$databaseName = 'Examen';
+$databaseName = 'ExamenR';
 $databaseUsername = 'root';
 $databasePassword = '';
 

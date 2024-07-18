@@ -18,9 +18,10 @@
         $result = mysqli_query($mysqli, "SELECT * FROM login");
     ?>
         <div class="alert alert-success">
-            Welcome <?php echo $_SESSION['name'] ?>! <a href='logout.php' class="btn btn-danger btn-sm">Logout</a>
+            Welcome <?php echo $_SESSION['username'] ?>! <a href='logout.php' class="btn btn-danger btn-sm">Logout</a>
         </div>
-        <a href='view.php' class="btn btn-primary">View and Add Products</a>
+        
+        <a href='viewUser.php' class="btn btn-primary">View and Add Products</a>
         <a href='profile.php' class="btn btn-primary">Profile</a>
     <?php
     } else {

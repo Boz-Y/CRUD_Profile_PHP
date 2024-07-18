@@ -48,7 +48,7 @@ while ($res = mysqli_fetch_array($result)) {
 </head>
 <body>
 <div class="container">
-    <a href="index.php" class="btn btn-link">Home</a> | <a href="view.php" class="btn btn-link">View Products</a> | <a href="logout.php" class="btn btn-link">Logout</a>
+    <a href="admin_dashboard.php" class="btn btn-link">Home</a> | <a href="view.php" class="btn btn-link">View Products</a> | <a href="logout.php" class="btn btn-link">Logout</a>
     <br/><br/>
     <h2>Edit Product</h2>
     <form name="form1" method="post" action="edit.php">

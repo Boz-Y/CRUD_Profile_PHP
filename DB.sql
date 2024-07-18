@@ -1,6 +1,6 @@
-create database `Examen`;
+create database `ExamenR`;
 
-use `Examen`;
+use `ExamenR`;
 
 CREATE TABLE `login` (
   `id` int(9) NOT NULL auto_increment,
@@ -22,5 +22,16 @@ CREATE TABLE `products` (
   CONSTRAINT FK_products_1
   FOREIGN KEY (`login_id`) REFERENCES `login`(`id`)
   ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `order_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE CASCADE,
+  FOREIGN KEY (`user_id`) REFERENCES `login`(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 

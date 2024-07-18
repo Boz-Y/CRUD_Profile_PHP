@@ -7,7 +7,7 @@ if(isset($_POST['login'])) {
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	$result = mysqli_query($mysqli, "SELECT * FROM login WHERE username='$username' AND password='$password'");
+	$result = mysqli_query($mysqli, "SELECT * FROM login WHERE username='$username' AND password=md5('$password')");
 
 	if(mysqli_num_rows($result) == 1) {
 		$row = mysqli_fetch_assoc($result);
